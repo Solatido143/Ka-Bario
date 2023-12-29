@@ -1,0 +1,31 @@
+{
+    "rules": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        "users": {
+            ".indexOn": ["email"],
+    
+            "$user_id": {
+            ".validate": "auth.uid === $user_id",
+            "name": {
+                ".validate": "newData.isString() && newData.val().length <= 50"
+            },
+            "email": {
+                ".validate": "newData.isString() && newData.val().matches(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$/)"
+            },
+            "residentialaddress": {
+                ".validate": "newData.child('houseno').isNumber() && newData.child('street').isString() && newData.child('barangay').isString()"
+            },
+            "residencydate": {
+                ".validate": "newData.isNumber()"
+            },
+            "permanentaddress": {
+                ".validate": "newData.isString()"
+            }
+            }
+        },
+        "request": {
+            ".indexOn": ["uid"]
+        }
+    }
+}

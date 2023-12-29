@@ -1,0 +1,159 @@
+:root {
+    --navbar-height: 0;
+}
+/* X-Small devices (landscape phones, 320px and up) */
+@media (min-width: 320px) {}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {} 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
+/* Style for the custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width as needed */
+}
+::-webkit-scrollbar-thumb {
+    background: #888; /* Scroll thumb color */
+    border-radius: 5px;
+}
+/* Adjust this class to style the track (the bar itself) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+/* Optional: You can also style Firefox scrollbars */
+::-moz-scrollbar {
+    width: 10px; /* Adjust the width as needed */
+}
+::-moz-scrollbar-thumb {
+    background: #888; /* Scroll thumb color */
+    border-radius: 5px;
+}
+/* Adjust this class to style the track for Firefox */
+::-moz-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+@media (min-width: 768px) {
+    .carousel-item img {
+        height: calc(100vh - var(--navbar-height));
+    }
+}
+.sections {
+    padding: 4.5rem 0;
+}
+@media (min-width: 992px) {
+    .sections {
+        padding: 8.25rem 0;
+    }
+}
+.sections-header {
+    font-family: poppins,sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 700;
+    color: #3763eb;
+    margin-bottom: 5px;
+}
+.sections-title {
+    line-height: 55px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #051441;
+}
+@media (min-width: 576px) {
+    .sections-title {
+        font-size: 40px;
+    }
+}
+.sections span {
+    font-family: poppins,sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 700;
+    color: #3763eb;
+    margin-bottom: 5px;
+}
+.sections-p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #6a7c92;
+    margin: 0;
+}
+.cardbody-style{
+    padding: 20px 20px;
+    border: 5px solid #7A7A7A;
+    border-radius: 10px;
+    transition: all .3s ease-out 0s;
+}
+@media (min-width: 576px) {
+    .cardbody-style {
+        padding: 40px 20px;
+    }
+}
+.cardbody-style:hover{
+    background-color: rgba(215, 213, 213, 0.904);
+}
+
+.services-body {
+    transition: all .3s ease-out 0s;
+}
+.services-body:hover {
+    background-color: rgba(215, 213, 213, 0.904);
+}
+
+.card-icon {
+    margin-bottom: 10px;
+}
+.cardbody i {
+    font-size: 4rem;
+}
+.about-section .about-content-wrapper .about-content .counter-up .counter span{
+    font-size: 40px;
+    font-weight: 600;
+    color: #3763eb;
+    display: block;
+    margin-bottom: 8px;
+}
+.about-section .about-content-wrapper .about-content .counter-up .counter h4{
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #051441;
+    font-size: 25px;
+}
+.counterparag{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #6a7c92;
+    margin: 0;
+}
+.about-experience {
+    width: 90%;
+    border-radius: 27px;
+    background: linear-gradient(to top left,#3763eb 0%,#6f58e8 100%);
+    border: 5px solid #eff2f9;
+    padding: 40px 20px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+@media (min-width: 992px) {
+    .about-experience {
+        width: 18.75rem;
+        top: 20%;
+        left: 80%;
+    }
+}
+.services-box-clamp{
+    display: -webkit-box; 
+    -webkit-line-clamp:1; 
+    -webkit-box-orient:vertical; 
+    overflow:hidden;
+}
